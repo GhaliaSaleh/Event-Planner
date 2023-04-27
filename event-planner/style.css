@@ -1,11 +1,10 @@
 
-
 .site-header {
   display: flex;
   align-items: center;
   padding: 10px;
   color: rebeccapurple;
-
+font-size:small;
 }
 
 
@@ -73,7 +72,6 @@ main .container{
  }
 
  .content .text h2{
-font-size: 40px;
 text-transform:uppercase;
 font-weight: 700;
 letter-spacing: 2px;
@@ -83,7 +81,6 @@ color: rebeccapurple;
 
  .content .text p{
   color:gray;
-  font-size: 18px;
   font-weight: 400;
   line-height: 25px;
   margin: 10px 0;
@@ -106,7 +103,6 @@ color: rebeccapurple;
 }
 .services h2{
   font-weight:bold;
-  font-size: 36px;
   text-transform:capitalize;
   display: block;
   text-align: center;
@@ -154,7 +150,6 @@ color: rebeccapurple;
 
 .col h3 {
   font-weight: 600;
-  font-size: 20px;
   text-transform:capitalize;
   margin: 10px 0;
   padding-left: 5px;
@@ -167,7 +162,6 @@ color: rebeccapurple;
   margin-bottom: 20px;
   padding-left: 5px;
   text-align: center;
-
 }
 
 .services .col:nth-child(2) {
@@ -189,7 +183,6 @@ color: rebeccapurple;
 }
 
 .purpose h2 {
-  font-size: 36px;
   margin-bottom: 20px;
   color: rebeccapurple;
   text-transform:capitalize;
@@ -198,7 +191,6 @@ color: rebeccapurple;
 }
 
 .purpose p  {
-  font-size: 18px;
   line-height: 1.5;
   margin-bottom: 40px;
   text-align:center;
@@ -212,7 +204,6 @@ color: black;
 }
 .new-container h2{
   text-align: center;
-  font-size: 40px;
 }
 
 .past-events {
@@ -220,7 +211,6 @@ color: black;
 }
 
 .past-events h2 {
-  font-size: 36px;
   margin-bottom: 20px;
   color: rebeccapurple;
 
@@ -241,14 +231,12 @@ color: black;
 }
 
 .event h3 {
-  font-size: 24px;
   margin-bottom: 10px;
   color: rebeccapurple;
 
 }
 
 .event p {
-  font-size: 18px;
   line-height: 1.6;
   color:#999;
   font-weight: 300;
@@ -264,7 +252,6 @@ color: black;
 #partners-section h2{
   text-align: center;
   color: rebeccapurple;
-  font-size: 28px;
 }
 
 
@@ -289,7 +276,6 @@ color: black;
 
 .partners-section h3 {
   margin-top: 20px;
-  font-size: 24px;
   font-weight: bold;
   color: #999;
 }
@@ -308,7 +294,6 @@ color: black;
   text-align: center;
   margin-bottom: 20px;
   color: rebeccapurple;
-
 }
 
 .subscribe-container form {
@@ -394,15 +379,30 @@ color: black;
 }
 .copy-container {
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 10px;
   color: #999;
   font-weight:bold;
 }
 
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 480px) {
 
+  
+  .site-nav ul {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .site-nav li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .site-nav a {
+    margin: 0;
+    font-size: 14px;
+  }
   .content .image{
     width: 180px;
     height: 210px;
@@ -461,20 +461,32 @@ color: black;
    }
 
    
-  .subscribe-container {
-    max-width: 300px;
+   .subscribe-container {
+    padding: 20px;
   }
+
   .subscribe-container h2 {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 15px;
   }
-  .subscribe-container input[type="text"],
-  .subscribe-container input[type="email"] {
+
+  .subscribe-container label {
     font-size: 12px;
   }
-  .subscribe-container input[type="submit"] {
-    padding: 8px 16px;
-    font-size: 14px;
+
+  .subscribe-container input[type="text"],
+  .subscribe-container input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    max-width: none;
   }
+
+  .subscribe-container input[type="submit"] {
+    padding: 10px;
+    max-width: none;
+  }
+
   .purpose h2{
     font-size: 28px;
   }
@@ -487,15 +499,40 @@ font-size: 18px;
     margin-right: 0;
   }
   
-  .copy-container p{
-    font-size: 14px;
-
+  .partner-column {
+    flex-basis: 100%;
   }
+
+  .txt{
+font-size: 16px;
+  }
+  
 
 .text{
   font-size: 14px;
 
 }  
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-navigation ul {
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.footer-navigation li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.copy-container {
+  margin-top: 15px;
+  font-size: 8px;
+}
   
 }
 
